@@ -1,14 +1,19 @@
+val razorpay: Any
+    get() {
+        TODO()
+    }
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
 }
 
 android {
-    namespace = "com.example.shambhavi"
+    namespace = "com.example.payment"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.shambhavi"
+        applicationId = "com.example.payment"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -42,6 +47,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.razorpay.checkout)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
